@@ -1,0 +1,25 @@
+
+
+
+/.apt_generated/
+/.factorypath
+
+
+
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Spring Boot
+.spring-boot-devtools.properties
+
+data/*.db
+
+/target/
