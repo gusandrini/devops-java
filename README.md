@@ -1,11 +1,16 @@
 <h1 align="center">🏍️ Projeto Mottu - Gerenciamento Inteligente de Pátios</h1>
 
 <p align="center">
-  <strong>Challenge 2025 - 1º Semestre | Disciplina: Java Advanced</strong><br>
+  <strong>Challenge 2025 - 2º Semestre | Disciplina: Devops</strong><br>
   <em>FIAP - 2º Ano - Análise e Desenvolvimento de Sistemas</em>
 </p>
 
 ---
+## Link vídeo
+https://youtu.be/JcCR6gIVcCo?si=YjJ4h1hmy23g5Kgj
+
+---
+
 
 ## 📖 Sobre o Projeto
 
@@ -29,7 +34,7 @@ Aplicação web e API REST construída em **Java 17 + Spring Boot 3** para gest�
 - Spring MVC, Spring Data JPA, Bean Validation
 - Spring Security (form login)
 - Thymeleaf
-- H2 Database (modo arquivo)
+- SQLServer
 - Flyway (migrações)
 - Swagger/OpenAPI (springdoc)
 - Lombok
@@ -54,76 +59,14 @@ git clone https://github.com/dudatiemiak/projeto-mottu.git
 cd projeto-mottu
 ```
 
-### 2) Executar com Maven (modo desenvolvimento)
+### 2) 🔐 Acesso à Aplicação (Web)
 
-```powershell
-mvn clean install
-mvn spring-boot:run
-```
-
-Aplicação sobe em: http://localhost:8080
-
-### 3) Executar via JAR (opcional)
-
-```powershell
-mvn clean package -DskipTests
-java -jar target/projeto-mottu-0.0.1-SNAPSHOT.jar
-```
-
-### 4) Executar com Docker (opcional)
-
-Com Docker Desktop aberto:
-
-```powershell
-docker build -t projeto-mottu .
-docker run -p 8080:8080 --name projeto-mottu projeto-mottu
-```
-
----
-
-## 🔐 Acesso à Aplicação (Web)
-
-- Login: http://localhost:8080/login
+- Login: https://sprint4-mottu.azurewebsites.net/login
 - Telas principais:
-  - Manutenções: http://localhost:8080/manutencao/lista
-  - Motos: http://localhost:8080/moto/lista
-  - Clientes: http://localhost:8080/cliente/lista
-
-Perfis e regras de acesso configuradas:
-- ADMIN: acesso total (inclui `/funcionario/**` e `/h2-console/**`).
-- OPERACIONAL, ATENDIMENTO, ANALISTA (quando existentes): acesso a `/manutencao/**`, `/moto/**` e `/cliente/**`.
-
----
-
-## 🗃️ Banco de Dados H2
-
-- Console web: http://localhost:8080/h2-console
-
----
-
-## 📘 Documentação da API
-
-- Swagger UI: http://localhost:8080/swagger-ui.html
-- OpenAPI JSON: http://localhost:8080/v3/api-docs
-
----
-
-## 🧭 Funcionalidades (destaques)
-
-- CRUD completo de entidades (motos, manutenções, clientes, filiais, etc.)
-- Validações de domínio com Bean Validation (ex.: datas não podem ser futuras)
-- Telas web com Thymeleaf
-- Autenticação por formulário (email/senha)
-- Não-CRUD na lista de Manutenções (telas web):
-  - Filtro “Somente em Aberto” (`abertas=true`)
-  - Busca por descrição (`q=palavra`)
-
----
-
-
-## 📌 Rotas (referência rápida da API)
-
-Consulte o Swagger para a lista completa e atualizada. Principais domínios: Bairros, Cidades, Clientes, Departamentos, Estados, Filiais, FilialDepartamento, Funcionários, Logradouros, Manutenções, Motos, Países e Telefones.
+  - Home: https://sprint4-mottu.azurewebsites.net/home
+  - Funcionários: https://sprint4-mottu.azurewebsites.net/funcionario/lista
+  - Motos: https://sprint4-mottu.azurewebsites.net/moto/lista
+  - Manutenção: https://sprint4-mottu.azurewebsites.net/manutencao/lista
 
 ---
 
